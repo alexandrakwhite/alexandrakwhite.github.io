@@ -1,0 +1,78 @@
+.nav-pills ul {
+  color: #000;
+  background-color: #fff;
+}
+
+.nav-pills li a {
+  color: #000;
+}
+
+.nav-pills li.active a {
+  color: #FFF;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.nav-pills li.active a:hover {
+  color: #FFF;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.nav-pills li a:hover {
+	background-color: #000;
+  color: #FFF;
+}
+
+.nav-pills li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-pills {
+    text-align:center;
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+  background: url('../images/logo.jpg') no-repeat center center;
+  height: 350px;
+  color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  /*background:transparent;*/
+}
+
+.jumbotron img {
+  width: 100%;
+  height: auto;
+}
+
+.form-inline {
+  padding-bottom: 15px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+  }
+
+h1 {
+  font-family: helvetica, sans-serif;
+  font-size: 30px;
+}
+
+p {
+  font-family: helvetica, sans-serif;
+}
+
+/* IMAGES */
+
+img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
