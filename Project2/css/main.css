@@ -9,12 +9,22 @@ img {
   padding-left: 0px;
 }
 
+.col-md-4.visible {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .hidden {
   display: none;
 }
 
 .visible {
   display: block;
+}
+
+.visible img {
+  height: auto;
+  max-width: 100%;
 }
 
 p.gender {
@@ -39,6 +49,10 @@ p.age {
 }
 
 .col-md-4.dog:hover .overlay {
+  opacity: .75;
+}
+
+.col-md-4.visible:hover .overlay {
   opacity: .75;
 }
 
