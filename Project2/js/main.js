@@ -40,15 +40,11 @@ var processDogForm = function(event) {
     var currentAge = allDogs[i].getAttribute('data-age');
     //Add && to this to trigger age
 
-      if (selectedGender == undefined) {
-        if (selectedAge == currentAge) {
+      if (selectedGender == undefined && selectedAge == currentAge) {
           allDogs[i].setAttribute('class', 'col-md-4 visible');
-        } //if selectedAge == currentAge
       } //if selectedGender == undefined
-    else if (selectedAge == undefined) {
-      if (selectedGender == currentGender) {
+    else if (selectedAge == undefined && selectedGender == currentGender) {
         allDogs[i].setAttribute('class', 'col-md-4 visible');
-      } // selectedGender == currentGender
     } //selectedAge == undefined
 
     else if (selectedGender == currentGender && selectedAge == currentAge) {
@@ -57,9 +53,8 @@ var processDogForm = function(event) {
   } else {
       //If not, hide it
       allDogs[i].setAttribute('class', 'hidden');
-    }
-
-  }
+    } //Close else 
+  } //Close line 37
 
   event.preventDefault();
 
