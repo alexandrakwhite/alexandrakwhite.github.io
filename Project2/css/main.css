@@ -66,3 +66,48 @@ p.age {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.nav-pills ul {
+  color: #000;
+  background-color: #fff;
+}
+
+.nav-pills li a {
+  color: #000;
+}
+
+.nav-pills li.active a {
+  color: #FFF;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.nav-pills li.active a:hover {
+  color: #FFF;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.nav-pills li a:hover {
+	background-color: #000;
+  color: #FFF;
+}
+
+.nav-pills li {
+    float:none;
+    display:inline-block;
+    *display:inline;
+     zoom:1;
+}
+
+.nav-pills {
+    text-align:center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+  }
