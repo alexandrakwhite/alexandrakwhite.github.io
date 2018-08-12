@@ -10,7 +10,7 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
           type: 'scattermapbox',
           lat: unpack(rows, 'lat'),
           lon: unpack(rows, 'lon'),
-          text: unpack(rows,'Artwork Title'),
+          text: unpack(rows,'title'),
           marker: {
             color: '#288EDA'
           }
