@@ -109,7 +109,7 @@ $(document).ready(function(){
     for(i=0;i<data.length; i++) {
 
     if (zip == data[i].zip && medium == 0) {
-    document.getElementById("answer").innerHTML += "<tr><td><img class='table_thumb' data-lightbox='thumbs' src='"  + data[i].image + "'/></td><td>" + data[i].title + "</td><td>" + data[i].artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].location + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+    document.getElementById("answer").innerHTML += "<tr><td><img class='table_thumb img-fluid' data-lightbox='thumbs' src='"  + data[i].image + "'/></td><td>" + data[i].title + "</td><td>" + data[i].artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].location + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
     j=j+1;
   } else if (zip == 0 && medium == data[i].medium) {
     document.getElementById("answer").innerHTML += "<tr><td><img class='table_thumb' data-lightbox='thumbs' src='"  + data[i].image + "'/></td><td>" + data[i].title + "</td><td>" + data[i].artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].location + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
@@ -149,8 +149,7 @@ google.charts.setOnLoadCallback(drawChart);
             subtitle: 'Top three Zipcodes',
           },
           bars: 'horizontal',// Required for Material Bar Charts.
-          height: 500,
-          width: 900,
+
         };
 
         var chart = new google.charts.Bar(document.getElementById('agg_bar'));
@@ -181,9 +180,7 @@ function drawCurveTypes() {
         },
         vAxis: {
           title: 'Popularity'
-        },
-        width: 900,
-        height: 400,
+        }
 
 
       };

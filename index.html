@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,10 +9,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
+    
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script><!-- jQuery -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+       <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
 
     <script src="data2.json"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -30,19 +37,43 @@
  -->
 
     <header>
-      <nav>
-        <ul>
-          <li><a href="#top">Top</a></li>
-          <li><a href="#intro">Intro</a></li>
-          <li><a href="#history">History</a></li>
-          <li><a href="#judd">Judd Graham</a></li>
-          <li><a href="#map">Map</a></li>
-          <li><a href="#filter">Explore</a></li>
-        </ul>
-      </nav>
+
+       
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="pr-4" href="#top">Top</a>
+      </li>
+      <li class="nav-item">
+        <a class="pr-4" href="#intro">Intro</a>
+      </li> 
+        <li class="nav-item">
+        <a class="pr-4" href="#history">History</a>
+      </li>
+        <li class="nav-item">
+        <a class="pr-4" href="#judd">Judd Graham</a>
+      </li>
+        <li class="nav-item">
+        <a class="pr-4" href="#map">Map</a>
+      </li>
+        <li class="nav-item">
+        <a class="pr-4" href="#filter">Explore</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+
+      
     </header>
 
-    <div class="container">
+    <div class="container-fluid pl-0 pr-0">
 
       <div id="top">
 
@@ -64,7 +95,7 @@
         <p>Austin&apos;s public art, while heavily centered in the downtown area, is spread throughout the city, with pieces as far out as Highland Park.</p>
 
         <div id="image_holder">
-          <img src="img/intro.jpeg" />
+          <img class="img-fluid mx-auto d-block" src="img/intro.jpeg" />
         </div>
 
         <p>With nearly 300 pieces and more than 100 artists dotting the city&apos;s public art scene, a plethora of media, styles and topics can be explored without having to set foot in a museum. Learn the history behind the public arts movement in Austin, hear from one local artist who has nearly a dozen peices in the city and explore the art yourself below.</p>
@@ -75,16 +106,17 @@
 
         <h3 id="h_title">History of Austin&apos;s public art</h3>
 
-        <div class="history_mod_LR">
+        <div class="row history_mod_LR">
+           <div class="col-xl"><img class="img-fluid mx-auto d-block mt-3 mb-5" src="img/texas.jpg"/></div>
+<div class="col-xl"><p>The first recorded piece of public art in Austin is Hugo Villa&apos;s &quot;Memorial to the Great Builders of Texas,&quot; which was installed in 1938. The city's <a href="https://www.austintexas.gov/sites/default/files/files/Planning/Demographics/population_history_pub.pdf" target="_blank">population was just more than 87,000 in 1940</a>, equivalent to <a href="http://www.city-data.com/city/Sugar-Land-Texas.html" target="_blank">the current population of Sugar Land</a>, a suburb southwest of Houston.</p></div>
+<div class="col-xl"><h3 mx-auto d-block>1938</h3></div>
 
-          <div>
-            <div>
-            <h3>1938</h3>
-            </div>
-            <p>The first recorded piece of public art in Austin is Hugo Villa&apos;s &quot;Memorial to the Great Builders of Texas,&quot; which was installed in 1938. The city's <a href="https://www.austintexas.gov/sites/default/files/files/Planning/Demographics/population_history_pub.pdf" target="_blank">population was just more than 87,000 in 1940</a>, equivalent to <a href="http://www.city-data.com/city/Sugar-Land-Texas.html" target="_blank">the current population of Sugar Land</a>, a suburb southwest of Houston.</p>
-          </div>
+            
+            
+            
+          
 
-          <img id="texas" src="img/texas.jpg"/>
+         
 
         </div><!-- .history_mod-->
 
@@ -98,7 +130,7 @@
 
 
 
-          <div id="agg_line"></div>
+          <div id="agg_line" class="chart"></div>
 
 
         </div><!-- .history_mod -->
@@ -109,11 +141,11 @@
             <h3>Today</h3>
           </div>
 
-          <p>Austin's public art is, however, cenrralized around the downtown area. The top three zipcodes in terms of the number of art pieces all share this central location. Sculptures dominate as the most common medium.</p>
+          <p>Austin's public art is, however, centralized around the downtown area. The top three zipcodes in terms of the number of art pieces all share this central location. Sculptures dominate as the most common medium.</p>
 
-          <div id="agg_bar"></div>
+    <div id="agg_bar" class="chart ml-4"></div>
 
-        </div>
+        
       </div><!-- .history_mod -->
 
     </div><!-- #history -->
@@ -124,9 +156,9 @@
 
         <p><span id="dropcap2">J</span>udd Graham is one of many Austin artist commissioned to create art to be showcased across the city of Austin as a part of Austin's public art initiative. His pieces, Spin and Arrays #1-9, are positioned outside the new Austin Central Library downtown. The style of these pieces blend in well with their surroundings, although once they are noticed, people are immediately drawn to them. When viewed up close, the viewer can observe just how many unique divots and patterns are involved in each one of Graham's pieces. While all of the pieces are uniform, no two are exactly alike, and that's what attracts people to them.</p>
 
-        <div>
-          <img src="img/judd.jpeg" />
-        </div>
+        
+          <img class="img-fluid" src="img/judd.jpeg" />
+        
 
         <p>Spin is a kinetic sculpture that encourages people passing by to spin each of its three sections. Made from hand-forged mild steel and uniquely texturized, children and adults can feel the different patterns of the sculpture as they spin it in different directions. Graham says it was originally intended to give children getting off of school buses something to do so they would all stay in one place, and the teachers wouldn't have to worry about the children running off. Arrays #1-9 are a series of sculptures that line the outside of the library. These mimic the shape of Spin, and serve as covers for bollards that separate pedestrians and vehicles passing through the area. The contract for these pieces was signed in 2014, before the library was even built, and in 2017 the pieces were officially installed. Together the sculptures took around 500 hours to make.</p>
 
@@ -226,6 +258,8 @@
 
     </div><!-- .container -->
 
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   </body>
 </html>
